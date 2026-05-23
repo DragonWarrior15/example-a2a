@@ -181,3 +181,6 @@ task {
   }
 }
 ```
+
+## Example 2: Setup Ollama locally
+Refer to [README](ollama_setup/README.md)
