@@ -1,5 +1,7 @@
 """Example Script for A2A implementation."""
 
+import time
+
 import uvicorn
 from a2a.helpers import (
     get_message_text,
@@ -59,7 +61,12 @@ class AdditionAgent:
 
     async def invoke(self, user_request: str) -> str:
         # the core agent implementation
-        nums = [int(x) for x in user_request.split(" ")]
+        if "," in user_request:
+            # remove all spaces, and split by ,
+            nums = [int(x) for x in user_request.strip().replace(" ", "").split(",")]
+        else:
+            # assume only a space separates the numbers
+            nums = [int(x) for x in user_request.strip().split(" ")]
         return str(sum(nums))
 
 
@@ -94,6 +101,8 @@ class AdditionAgentExecutor(AgentExecutor):
             state=TaskState.TASK_STATE_WORKING,
             message=new_text_message("Processing request..."),
         )
+
+        time.sleep(3)
 
         # 3. Collect user request from request content and invoke
         # LLM agent to generate content
@@ -135,12 +144,12 @@ request_handler = DefaultRequestHandler(
     agent_card=public_agent_card,
 )
 
-routes = [
-    # this route is for exposing the agent card
-    create_agent_card_routes(public_agent_card),
-    # this route is for exposing the request handler
-    create_jsonrpc_routes(request_handler, "/"),
-]
+routes = []
+# this route is for exposing the agent card; this function returns
+# a list of one route
+routes.extend(create_agent_card_routes(public_agent_card))
+# this route is for exposing the request handler
+routes.extend(create_jsonrpc_routes(request_handler, "/"))
 
 # create a fast api app to serve the routes
 app = FastAPI(routes=routes)
