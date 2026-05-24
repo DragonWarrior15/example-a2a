@@ -604,7 +604,6 @@ dependencies = [
     { name = "fastapi", extra = ["standard"] },
     { name = "google-adk" },
     { name = "langchain" },
-    { name = "langchain-litellm" },
     { name = "langchain-ollama" },
     { name = "litellm" },
     { name = "ollama" },
@@ -619,7 +618,6 @@ requires-dist = [
     { name = "fastapi", extras = ["standard"], specifier = ">=0.136.1" },
     { name = "google-adk", specifier = ">=2.1.0" },
     { name = "langchain", specifier = ">=1.3.1" },
-    { name = "langchain-litellm", specifier = ">=0.6.6" },
     { name = "langchain-ollama", specifier = ">=1.1.0" },
     { name = "litellm", specifier = ">=1.85.1" },
     { name = "ollama", specifier = ">=0.6.2" },
@@ -1519,21 +1517,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/59/de/679a53472c25860837e32c0442c962fa86e95317a36460e2c9d5c91b17c2/langchain_core-1.4.0.tar.gz", hash = "sha256:1dc341eed802ed9c117c0df3923c991e5e9e226571e5725c194eeb5bd93d1a7f", size = 920260, upload-time = "2026-05-11T18:42:35.919Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0f/1a/86c38c27b81913a1c6c12448cab55defb5a1097c7dc9a4cea83f55477a2d/langchain_core-1.4.0-py3-none-any.whl", hash = "sha256:23cbbdb46e38ddd1dd5247e6167e96013eae74bea4c5949c550809970a9e565c", size = 548120, upload-time = "2026-05-11T18:42:33.992Z" },
-]
-
-[[package]]
-name = "langchain-litellm"
-version = "0.6.6"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "cryptography" },
-    { name = "httpx" },
-    { name = "langchain-core" },
-    { name = "litellm" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/17/70/e1f42ceccd5fdad78ed7fd1a150c12661b63b92647d768168cd9efcdcf15/langchain_litellm-0.6.6.tar.gz", hash = "sha256:fb4399ae4c239b5bb85c19574a5bb4c17988433d48ec716e62144f0dad4a63af", size = 346225, upload-time = "2026-05-21T11:27:56.869Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/f9/d0/adda5508115c28d78b408cc8f6b1e3fa3b2cc83a551b62cd613bb705535c/langchain_litellm-0.6.6-py3-none-any.whl", hash = "sha256:d49d0353254e10e38c351d7eae3d7b34128a0d31a3a22928ac289a8987c21a30", size = 26393, upload-time = "2026-05-21T11:27:55.709Z" },
 ]
 
 [[package]]
