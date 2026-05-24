@@ -9,3 +9,6 @@ Refer to [README](ollama_setup/README.md)
 
 ## Example 3: Create Google ADK Agent
 Refer to [README](google_adk_agent/README.md)
+
+## Example 4: LangGraph React Agent
+Refer to [README](langgraph_react_agent/README.md)
