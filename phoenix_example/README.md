@@ -27,3 +27,8 @@ This is just an indication that tracing in fact did get used. Once we go to Phoe
 And once we go into the project and check the generated trace, individual functions with their inputs and outputs are logged.
 
 ![Sample Phoenix Project](images/sample_phoenix_trace_02.png)
+
+## Trace and Agent with Tool Calls
+Run `python langgraph_react_agent/react_agent.py` from the repository root. A new project `sample-agent-trace` gets created in phoenix, and we can see the trace of our react agent with tool calls.
+
+![Sample Agent Trace](images/sample_agent_trace_01.png)

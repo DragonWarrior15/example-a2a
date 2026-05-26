@@ -1,6 +1,12 @@
 # example-a2a
 Repository for a sample setup of Agent to agent (A2A) communication
 
+## Base Setup
+Common setup for all examples in this repository. Setup `PYTHONPATH` variable so that libraries are correctly found.
+```
+export PYTHONPATH=$(pwd)
+```
+
 ## Example 1: Setup an A2A Server
 Refer to [README](setup_a2a_server/README.md)
 
