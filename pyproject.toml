@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "a2a-sdk>=1.0.3",
+    "arize-phoenix>=16.0.0",
+    "arize-phoenix-otel>=0.16.1",
     "asyncio>=4.0.0",
     "fastapi[standard]>=0.136.1",
     "google-adk>=2.1.0",
@@ -13,6 +15,7 @@ dependencies = [
     "langchain-ollama>=1.1.0",
     "litellm>=1.85.1",
     "ollama>=0.6.2",
+    "openinference-instrumentation-langchain>=0.1.66",
     "sse-starlette>=3.4.4",
     "uvicorn>=0.47.0",
 ]
